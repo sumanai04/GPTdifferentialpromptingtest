@@ -1,0 +1,174 @@
+Waiting for Gemini...
+AI: ```python
+def max_sum_inversions(bits):
+    n = len(bits)
+    # dp[i][j] stores the maximum sum of inversions considering the first i bits
+    # with the first occurrence of 0 flipped (if j = 1) or not flipped (if j = 0)
+    dp = [[0] * 2 for _ in range(n + 1)]
+
+    # Initialize the first row of dp
+    dp[0][0] = 0  # Not flipping the first occurrence of 0
+    dp[0][1] = 0  # Flipping the first occurrence of 0
+
+    for i in range(1, n + 1):
+        # Not flipping the first occurrence of 0
+        dp[i][0] = dp[i - 1][0] + (1 - bits[i - 1])
+        # Flipping the first occurrence of 0
+        dp[i][1] = max(dp[i - 1][0], dp[i - 1][1]) + bits[i - 1]
+
+    # Reverse the bits
+    bits.reverse()
+
+    # Calculate the maximum sum of inversions considering the reversed bits
+    for i in range(1, n + 1):
+        # Not flipping the first occurrence of 1
+        dp[i][0] += (1 - bits[i - 1])
+        # Flipping the first occurrence of 1
+        dp[i][1] = max(dp[i - 1][0], dp[i - 1][1]) + bits[i - 1]
+
+    # Return the maximum sum of inversions
+    return max(dp[n])
+```
+Waiting for Gemini...
+AI: ```python
+def max_inversions(bits):
+  """
+  Finds the maximum possible sum of inversions by performing two optional operations on a binary number.
+
+  Parameters:
+    bits: A list of digits representing a binary number, where each digit is either 0 or 1.
+
+  Returns:
+    The maximum sum of inversions that can be obtained after applying the operations.
+  """
+
+  # Initialize the maximum sum of inversions to 0.
+  max_sum = 0
+
+  # Iterate over the bits from left to right.
+  for i in range(len(bits)):
+    # If the current bit is 0, flip it to 1 and update the maximum sum of inversions.
+    if bits[i] == 0:
+      bits[i] = 1
+      max_sum += i
+
+  # Iterate over the bits from right to left.
+  for i in range(len(bits) - 1, -1, -1):
+    # If the current bit is 1, flip it to 0 and update the maximum sum of inversions.
+    if bits[i] == 1:
+      bits[i] = 0
+      max_sum += len(bits) - 1 - i
+
+  # Return the maximum sum of inversions.
+  return max_sum
+```
+Reference versions generating end!
+Test inputs generation 1:
+Waiting for Gemini...
+AI: Test input: 3
+Test input: 3
+Test input: 101
+Test input: 4
+Test input: 0101
+Test input: 5
+Test input: 10010
+Traceback (most recent call last):
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 38, in <module>
+    print(sol.BinaryInversions(n, bits))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 12, in BinaryInversions
+    if hasSecond and bits[n-i-1] == 1:
+                     ~~~~^^^^^^^
+IndexError: list index out of range
+Test inputs generation 2:
+Waiting for Gemini...
+AI: Test input: 2
+Test input: 4
+0 1 0 1
+Test input: 4
+0 1 1 1
+Traceback (most recent call last):
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 34, in <module>
+    t = int(input())
+        ^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '0 1 0 1'
+Traceback (most recent call last):
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 34, in <module>
+    t = int(input())
+        ^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '0 1 1 1'
+Test inputs generation 3:
+Waiting for Gemini...
+AI: Test input: 2
+Test input: 4
+Test input: 0100
+Test input: 5
+Test input: 10101
+Traceback (most recent call last):
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 38, in <module>
+    print(sol.BinaryInversions(n, bits))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 12, in BinaryInversions
+    if hasSecond and bits[n-i-1] == 1:
+                     ~~~~^^^^^^^
+IndexError: list index out of range
+Test inputs generation 4:
+Waiting for Gemini...
+AI: Test input: 2
+Test input: 5
+0 1 0 1 1
+Test input: 3
+1 1 0
+Traceback (most recent call last):
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 34, in <module>
+    t = int(input())
+        ^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '0 1 0 1 1'
+Traceback (most recent call last):
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 34, in <module>
+    t = int(input())
+        ^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '1 1 0'
+Test inputs generation 5:
+Waiting for Gemini...
+AI: Test input: 2
+Test input: 4
+0 1 1 0
+Test input: 6
+0 0 0 0 0 1
+Traceback (most recent call last):
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 34, in <module>
+    t = int(input())
+        ^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '0 1 1 0'
+Traceback (most recent call last):
+  File "C:\Users\hylmi\OneDrive - UGM 365\Coding\dfprompting-database\main\PUT_code.py", line 34, in <module>
+    t = int(input())
+        ^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '0 0 0 0 0 1'
+Test inputs generation 6:
+Waiting for Gemini...
+AI: Test input: 1
+Test input: 4
+Test input: 0 0 1 0
+Test input: 4
+Test input: 1 1 0 0
+Test input: 5
+Test input: 0 0 1 0 1
+Test input: 1
+Test input: 0
+The result of test 1:
+Failure-Inducing Test is
+1
+4
+0 0 1 0
+4
+1 1 0 0
+5
+0 0 1 0 1
+1
+0
+
+The assert is
+
+End!

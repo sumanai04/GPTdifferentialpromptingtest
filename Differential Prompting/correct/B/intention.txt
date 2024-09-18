@@ -1,0 +1,5 @@
+This is a program written in Python, a popular programming language. 
+The program takes an integer n as input, which represents the number of test cases to be processed. 
+For each test case, it takes an integer a and a string s as input. 
+The program then iterates through the characters of the string s and finds the character with the largest ASCII value. 
+It then subtracts 96 from the ASCII value of the character and prints the result.

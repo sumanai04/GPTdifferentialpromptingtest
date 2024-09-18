@@ -1,0 +1,8 @@
+This program checks whether there are two vertex-disjoint paths between two vertices in a tree.
+It takes a number of test cases as input, and for each test case, it takes a number of vertices, a source vertex, and a destination vertex.
+It then reads the edges of the tree and constructs an adjacency list representation of the tree.
+It then uses a breadth-first search to find the path from the source vertex to the destination vertex.
+It then uses another breadth-first search to find the path from the destination vertex to the source vertex.
+It then checks whether there are two vertex-disjoint paths between the source vertex and the destination vertex by checking whether the intersection of the set of vertices in the first path and the set of vertices in the second path has more than one element.
+It also checks whether there are more than one vertex with a value of 0 in the second path, which indicates that the path is not vertex-disjoint.
+If either of these conditions is true, the program prints "YES", otherwise it prints "NO".

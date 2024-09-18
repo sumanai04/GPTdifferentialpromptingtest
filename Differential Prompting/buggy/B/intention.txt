@@ -1,0 +1,13 @@
+This program takes an integer n as input, which represents the number of test cases to follow. For each test case, it reads an integer a and a string s. The goal of the program is to find the maximum ASCII value of a character in the string s that is greater than the value of a and then subtract 96 from that ASCII value. The result is printed for each test case.
+Here's a step-by-step explanation of the program:
+1.	It starts by reading an integer n from the input, which represents the number of test cases.
+2.	The program then enters a loop that iterates over each test case.
+3.	For each test case:
+a.	It reads an integer a from the input.
+b.	It initializes a variable s to an empty string.
+c.	It reads a string s from the input.
+d.	The program enters a loop that iterates over each character in the string s.
+e.	Inside the loop, it checks if the ASCII value of the current character in s (ord(s[i])) is greater than the value of a.
+f.	If the ASCII value is greater than a, it updates the value of a to the ASCII value of the current character.
+g.	After processing all the characters in the string, the program subtracts 96 from the value of a and prints the result.
+4.	The program repeats the above steps for each test case.

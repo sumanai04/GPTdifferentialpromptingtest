@@ -1,0 +1,1 @@
+This program reads a series of test cases. For each test case, it reads a list of integers and finds the two largest elements in the list. It then prints the difference between each element in the list and the second largest element.

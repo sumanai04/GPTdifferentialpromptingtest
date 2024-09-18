@@ -1,0 +1,6 @@
+The given program takes a binary number as input, represented by a list of digits `bits`, where each digit is either 0 or 1. The program's intention is to find the maximum possible sum of inversions it can achieve by performing two optional operations:
+
+1. **First Operation**: Starting from the beginning of the number, flip the first occurrence of 0 to 1.
+2. **Second Operation**: Starting from the end of the number, flip the first occurrence of 1 to 0.
+
+The program then calculates and returns the maximum sum of inversions that can be obtained after applying these operations.

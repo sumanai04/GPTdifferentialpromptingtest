@@ -1,0 +1,10 @@
+The intention of the program is to determine if it is possible to travel between node `a` and node `b` with a unique XOR value on the path from `a` to `b` and the path from `b` to `a`.
+- The program first reads an integer `t`, which represents the number of test cases.
+- For each test case, it reads three integers `n`, `a`, and `b`, where `n` is the number of nodes in the graph, `a` is the starting node, and `b` is the destination node.
+- A list of `n-1` edges is given, where each edge is represented by integers `u`, `v`, and `w`, indicating that there is an edge between nodes `u` and `v` with a weight of `w`.
+- It calculates two lists, `fromA` and `fromB`, which store the XOR values of the paths from node `a` and `b` to each other node, respectively.
+- It checks two conditions:
+  - If there is more than one node that has the same XOR value for both paths, it prints "YES".
+  - If more than two nodes have an XOR value of 0 for the path from node `b`, it prints "YES".
+- If neither of these conditions is met, it prints "NO".
+- For test case 52, it prints additional information for debugging.

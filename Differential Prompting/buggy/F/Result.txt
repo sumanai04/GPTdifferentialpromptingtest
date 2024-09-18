@@ -1,0 +1,205 @@
+Waiting for Gemini...
+AI: ```python
+for _ in range(int(input())):
+    n, c, d = map(int, input().split())
+    A = list(map(int, input().split()))
+    A.sort(reverse=True)
+    if sum(A[:d]) >= c:
+        print("Infinity")
+    elif A[0] * d < c:
+        print("Impossible")
+    else:
+        l, r = 0, n
+        while l < r:
+            mid = (l + r) // 2
+            selecsum = sum(A[:mid + 1])
+            numselec = d // (mid + 1)
+            remain = d % (mid + 1)
+            coins = selecsum * numselec + A[mid] * remain
+            if coins >= c:
+                l = mid
+            else:
+                r = mid - 1
+        print(l)
+```
+Waiting for Gemini...
+AI: ```python
+for _ in range(int(input())):
+    n, c, d = map(int, input().split())
+    A = list(map(int, input().split()))
+    A.sort(reverse=True)
+    if sum(A[:d]) >= c:
+        print("Infinity")
+    elif A[0] * d < c:
+        print("Impossible")
+    else:
+        l = 0
+        r = d
+        while l < r:
+            mid = (l + r) // 2
+            selecsum = sum(A[:mid + 1])
+            numselec = mid + 1
+            remain = d - numselec
+            coins = selecsum + min(A[mid + 1], max(0, remain))
+            if coins >= c:
+                l = mid + 1
+            else:
+                r = mid - 1
+        print(l - 1)
+```
+Reference versions generating end!
+Test inputs generation 1:
+Waiting for Gemini...
+AI: Test input: 1
+10 41 10
+2 1 1 5 2 1 1 1 1 1
+Test input: 2
+1 10 1
+10
+Test input: 3
+10 21 5
+1 1 1 1 1 1 1 1 2 1
+Test inputs generation 2:
+Waiting for Gemini...
+AI: Test input:
+1
+5 10 3
+1 3 7 2 10
+
+Test input:
+2
+4 6 3
+2 1 3 4
+5 10 5
+1 2 3 4 5
+
+Test input:
+4
+4 6 1
+2 1 3 4
+5 10 2
+1 2 3 4 5
+2 20 6
+1 1 1 2 2 2
+6 50 3
+1 2 3 4 5 6
+
+Test input:
+5
+2 6 2
+1 5
+3 7 2
+5 1 2
+6 10 3
+3 1 2 3
+4 20 4
+1 1 1 4
+5 100 5
+1 10 10 10 80
+Test inputs generation 3:
+Waiting for Gemini...
+AI: Test input: 1
+2 2 1
+1 2
+Test input: 2
+3 6 2
+2 3 4
+Test input: 3
+10 16 5
+9 9 9 8 8 7 5 5 4 1
+Test input: 4
+2 2 1
+1 1
+Test input: 5
+10 100 2
+99 99 99 99 99 99 99 99 99 99
+Test inputs generation 4:
+Waiting for Gemini...
+AI: Test input: 3
+Test input: 9 32 100
+Test input: 4 8 15
+Test input: 101 8 15
+Test inputs generation 5:
+Waiting for Gemini...
+AI: Test input: 1
+2 5 1
+5 10
+Test input: 5
+7 11 6
+1 2 3 4 5 6 7
+10 17 6
+1 2 3 4 5 6 7
+2 3 4
+1 2 3 4
+100 200 100
+1 2 3 4 5 6 7 8 9 10
+1 2 1000
+1 2 3
+Test input: 2
+1 6 2
+4 7
+7 24 10
+1 2 3 4 5 6 7
+Test inputs generation 6:
+Waiting for Gemini...
+AI: Test input: 2
+Test input: 6 18 3
+4 3 7 8 1 8
+Test input: 15 15 7
+7 5 5 13 14 11 12 14 2 9 6 15 14 9 14
+Test inputs generation 7:
+Waiting for Gemini...
+AI: Test input:
+5
+5 10 3
+1 1 1 1 1
+Test input:
+5 120 3
+100 10 10
+Test input:
+4 50 2
+10 20 30 40
+Test input:
+3 45 1
+10 20 30
+Test input:
+7 240 4
+20 20 20 20 20 20 20
+Test input:
+6 200 4
+20 30 40 50 60 70
+Test inputs generation 8:
+Waiting for Gemini...
+AI: Test input: 3
+Test input: 10 5 4
+Test input: 10 500 3
+Test input: 2 2 1
+Test input: 6 13 3
+Test input: 14 7 4
+Test inputs generation 9:
+Waiting for Gemini...
+AI: Test input: 3
+Test input: 3 5 1
+Test input: 5 26 2
+Test input: 4 48 4
+Test input: 2 9 1
+Test inputs generation 10:
+Waiting for Gemini...
+AI: Test input:
+5 5 2
+5 6 2 2 8
+Test input:
+5 7 3
+5 6 2 2 8
+Test input:
+5 11 3
+5 6 2 2 1
+Test input:
+5 110 5
+1 3 3 3 3
+Test input:
+5 11 5
+1 3 3 3 3
+The result of test 1:
+No failure-inducing test is found.
+End!

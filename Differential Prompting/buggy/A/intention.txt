@@ -1,0 +1,6 @@
+The intention of the program is to solve the following problem:
+
+You are given a list of n lists of 3 integers each. For each list, you have to find the median of the 3 integers and print it.
+The median is the middle element when the elements are sorted in ascending order.
+
+The program first takes an integer t as input, which represents the number of lists. Then, it enters a while loop that runs until t becomes less than or equal to 1. Inside the loop, it takes 3 integers as input and stores them in a list a. Then, it sorts the list a in ascending order and prints the median, which is the second element of the sorted list. Finally, it decrements t by 1 and continues to the next iteration of the loop.

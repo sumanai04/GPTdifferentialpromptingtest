@@ -1,0 +1,23 @@
+This program takes input about a game where the player can choose to collect coins from a list of coins `A` with size `n`, and the player wants to collect at least `c` coins. The program determines how many coins the player can collect within `d` moves and informs the user of the result.
+
+1. The `for` loop handles multiple test cases.
+
+2. For each test case, it reads three integers `n`, `c`, and `d` and a list of `n` integers `A`.
+
+3. It sorts the list `A` in descending order.
+
+4. It checks if the sum of the first `d` elements of the sorted list `A` is greater than or equal to `c`. If so, it prints "Infinity" because the player can collect enough coins with just `d` moves.
+
+5. If the product of the first element of `A` and `d` is less than `c`, it prints "Impossible" because the player cannot collect enough coins even with all `d` moves.
+
+6. Otherwise, it performs a binary search to find the maximum number of elements `mid` from the sorted list `A` that the player can choose to collect at least `c` coins within `d` moves.
+
+7. The binary search iterates until `l` is greater than or equal to `r`.
+
+8. In each iteration, it calculates the `selecsum`, which is the sum of the first `mid+1` elements of the sorted list `A`, and 'numselec,' which is the number of times the player can choose `mid+1` elements within `d` moves.
+
+9. It also calculates the remaining number of moves, `remain`, and the number of coins the player collects, `coins`, based on the selected elements and remaining moves.
+
+10. If `coins` is greater than or equal to `c`, it means the player can collect enough coins within `mid` moves, so it updates `l` to `mid`. Otherwise, it updates `r` to `mid-1`.
+
+11. Finally, it prints `mid-1`, which is the maximum number of elements the player can choose to collect at least `c` coins within `d` moves.

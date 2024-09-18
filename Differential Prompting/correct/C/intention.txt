@@ -1,0 +1,10 @@
+The intention of this program is to calculate the profit that can be made by selling each element of an array.
+
+The first line of the program reads an integer `t`, which represents the number of test cases.
+For each test case, the program reads an integer `n`, which represents the number of elements in the array, and then reads the array `s` of `n` integers.
+
+The program then finds the two largest elements in the array, `mx[0]` and `mx[1]`.
+For each element `s[i]` in the array, the program calculates the profit that can be made by selling `s[i]`.
+The profit is calculated as the difference between `s[i]` and the larger of `s[mx[0]]` and `s[mx[1]]`.
+
+Finally, the program prints the profit for each element in the array, separated by spaces.

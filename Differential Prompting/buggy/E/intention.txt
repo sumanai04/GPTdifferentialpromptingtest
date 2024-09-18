@@ -1,0 +1,14 @@
+Given a binary array `bits` of length `n`, the goal of this program is to find the maximum sum of bitwise `XOR` values for three different scenarios:
+
+1. The original array `bits`.
+2. An array `first` where the first occurrence of 0 in `bits` is replaced with 1, and all subsequent 1s are flipped to 0s.
+3. An array `second` where the first occurrence of 1 in `bits` is replaced with 0, and all subsequent 0s are flipped to 1s.
+
+The program initializes three copies of the input array: `first`, `second`, and `orig`. It then iterates through the array `bits` and applies the appropriate changes to `first` and `second`, depending on whether the current bit is 0 (for `first`) or 1 (for `second`).
+
+After these changes, the program calculates the sum of bitwise `XOR` values for each of the three arrays (`orig`, `first`, and `second`) using a reverse iteration. It keeps track of the number of consecutive 0s (`zeros`) and 1s (`sum`) encountered and calculates the sum as follows:
+
+For each 1 encountered, add the count of consecutive 0s to the sum.
+For each 0 encountered, increment the count of consecutive 0s.
+
+Finally, the program returns the maximum sum of bitwise `XOR` values among the three scenarios.

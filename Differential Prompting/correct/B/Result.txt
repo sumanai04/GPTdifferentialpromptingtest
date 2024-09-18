@@ -1,0 +1,153 @@
+Waiting for Gemini...
+AI: ```python
+n = int(input())
+for i in range(n):
+    a = int(input())
+    s = input()
+    max_ascii = ord(max(s))
+    print(max_ascii - 96)
+```
+Waiting for Gemini...
+AI: ```python
+n = int(input())
+for i in range(n):
+    a, s = input().split()
+    ascii = 0
+    for ch in s:
+        curr = ord(ch)
+        if curr > ascii:
+            ascii = curr
+    print(ascii - 96)
+```
+Reference versions generating end!
+Test inputs generation 1:
+Waiting for Gemini...
+AI: Test input: 1
+Test input: 1
+Test input: a
+Test input: 2
+Test input: 22
+Test input: cd
+Test input: 3
+Test input: 312
+Test input: zx
+Test inputs generation 2:
+Waiting for Gemini...
+AI: Test input: 3
+Test input: 3
+Test input: bca
+Test input: 10
+Test input: abcdk
+Test input: 26
+Test input: z
+Test inputs generation 3:
+Waiting for Gemini...
+AI: Test input: 1
+Test input: 2
+Test input: 5
+Test input: 26
+Test input: 52
+Test inputs generation 4:
+Waiting for Gemini...
+AI: Test input:
+1
+1
+t
+Test input:
+1
+26
+abcdefghijklmnopqrstuvwxyz
+Test inputs generation 5:
+Waiting for Gemini...
+AI: Test input: 5
+Test input: 1
+Test input: ab
+Test input: 3
+Test input: xyz
+Test input: 2
+Test input: ba
+Test input: 12
+Test input: aaaaaaaaaaaa
+Test inputs generation 6:
+Waiting for Gemini...
+AI: Test input:
+1
+1
+a
+
+Test input:
+2
+2
+ab
+3
+def
+
+Test input:
+3
+5
+pqrst
+4
+lmno
+3
+xyz
+
+Test input:
+4
+7
+abcdefg
+6
+bacdef
+5
+abcde
+4
+abcd
+Test inputs generation 7:
+Waiting for Gemini...
+AI: Test input: 1
+2
+32
+Test input: 2
+2
+29
+l
+Test input: 3
+3
+32
+kj
+Test input: 4
+2
+32
+jj
+Test input: 5
+1
+8
+(
+Test inputs generation 8:
+Waiting for Gemini...
+AI: Test input: 5
+Test input: 10
+Test input: abcdefg
+Test input: 25
+Test input: zyxwvutsrq
+Test input: 6
+Test input: baabaa
+Test inputs generation 9:
+Waiting for Gemini...
+AI: Test input: 1
+Test input: 2
+Test input: 2
+Test input: 5
+Test input: 10
+Test input: 26
+Test inputs generation 10:
+Waiting for Gemini...
+AI: Test input: 1
+Test input: 5
+Test input: abab
+Test input: 1
+Test input: a
+Test input: 11
+Test input: abccccccccc
+The result of test 1:
+No failure-inducing test is found.
+End!

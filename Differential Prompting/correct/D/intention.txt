@@ -1,0 +1,9 @@
+This program is written in Python and it reads a list of integers L.
+It then iterates over the list and checks if the elements are equal.
+If they are equal, it continues to the next iteration.
+If they are not equal, it checks if the previous element is greater than the current element and if the next element is smaller than the current element.
+If both conditions are met, it checks if there is already a winning pair of indices (b, e) that satisfy the same conditions.
+If there is no winning pair, it sets the winning pair to the current indices (b, e).
+If there is already a winning pair, it checks if the current pair is trivial (i.e. if the first element of the pair is 0 and the second element is equal to the length of the list).
+If the current pair is trivial, it sets the winning pair to False.
+Finally, it checks if the winning pair is not False and prints "YES" if it is True and "NO" if it is False.

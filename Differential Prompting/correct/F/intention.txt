@@ -1,0 +1,26 @@
+This program takes multiple test cases, each consisting of integer inputs `n`, `c`, and `d`, and a list of `n` integer values. The program then sorts the list of integers in descending order and attempts to determine the minimum number of 'boxes' that can be packed with `d` items each, such that the sum of the values in each box is greater than or equal to `c`.
+
+Here's a summary of the program:
+
+1. It reads the number of test cases.
+
+2. For each test case:
+   - It reads integers `n`, `c`, and `d` from input.
+   - It reads a list of `n` integers and sorts them in descending order.
+
+3. It calculates the sum of the first `d` values in the sorted list and compares it to `c`.
+   - If the sum is greater than or equal to `c`, it prints "Infinity" (indicating arbitrarily many boxes can be packed).
+   - If the sum is less than `c`, it checks if the sum of all `n` values is less than `c * d`.
+     - If it is, it prints "Impossible" (indicating it's not possible to pack any boxes given the constraints).
+     - Otherwise, it continues to the next step.
+
+4. It initializes `l` and `r` to `0` and `d`, respectively, and calculates `mid` as the middle point between `l` and `r`.
+
+5. It enters a loop that continues until `l` is greater than or equal to `r`.
+   - Inside the loop, it calculates the sum of the first `mid+1` values in the sorted list, the number of boxes that can be filled with those values ('numselec'), and the remaining items that cannot be accommodated in the current box ('remain').
+   - It also calculates the total 'coins' collected by filling the boxes (equal to `numselec * selecsum + sum(A[:remain])`).
+   - If `coins` is greater than or equal to `c`, it updates `l` to `mid` because it can fill more boxes with the current `mid` value.
+   - Otherwise, it updates `r` to `mid - 1`.
+   - It recalculates `mid` as the middle point between `l` and `r` for the next iteration.
+
+6. After exiting the loop, it prints the value of `mid`, which represents the minimum number of boxes required to pack the items with a total sum greater than or equal to `c` in each box.
